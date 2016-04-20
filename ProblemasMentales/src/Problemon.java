@@ -44,7 +44,7 @@ public class Problemon extends JFrame {
 		contentPane.add(nombre);
 		nombre.setColumns(10);
 		
-		JButton valium = new JButton("Valium");
+		JButton valium = new JButton("Prozac");
 		contentPane.add(valium);
 	}
 
