@@ -5,12 +5,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
 public class Problemon extends JFrame {
 
-	private JPanel contentPane;
 	private JTextField nombre;
 
 	/**
@@ -33,19 +36,30 @@ public class Problemon extends JFrame {
 	 * Create the frame.
 	 */
 	public Problemon() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
-		
-		nombre = new JTextField();
-		contentPane.add(nombre);
-		nombre.setColumns(10);
-		
-		JButton valium = new JButton("Prozac");
-		contentPane.add(valium);
+		JButton button;
+		setLayout(new GridBagLayout());
+		GridBagConstraints c = new GridBagConstraints();
+		c.fill = GridBagConstraints.HORIZONTAL;
+
+
+
+		button = new JButton("Long-Named Button 4");
+		c.ipady = 40;      //make this component tall
+		c.weightx = 1;
+		c.gridwidth = 3;
+		c.gridx = 0;
+		c.gridy = 1;
+		add(button, c);
+
+		button = new JButton("5");
+		c.ipady = 0;       //reset to default
+		c.weighty = 1.0;   //request any extra vertical space
+		c.anchor = GridBagConstraints.PAGE_END; //bottom of space
+		c.insets = new Insets(10,0,0,0);  //top padding
+		c.gridx = 1;       //aligned with button 2
+		c.gridwidth = 2;   //2 columns wide
+		c.gridy = 2;       //third row
+		add(button, c);
 	}
 
 }
