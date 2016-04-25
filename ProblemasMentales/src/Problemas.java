@@ -1,7 +1,8 @@
 
 public class Problemas {
 	String tipoProblemas="";
-	int numProblemas=10;
+	int numProblemas=0;
+
 
 	public Problemas() {
 		// TODO Auto-generated constructor stub
