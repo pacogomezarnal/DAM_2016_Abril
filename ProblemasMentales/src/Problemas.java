@@ -2,7 +2,7 @@
 public class Problemas {
 	String tipoProblemas="";
 	int numProblemas=30;
-	String porqueToco="";
+	String porqueToco="Por que si";
 	boolean hasTocado=false;
 
 	public Problemas() {
