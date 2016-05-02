@@ -1,7 +1,7 @@
 
 public class Problemas {
 	String tipoProblemas="";
-	int numProblemas=10;
+	int numProblemas=15;
 	String porqueToco="";
 	boolean hasTocado=false;
 
